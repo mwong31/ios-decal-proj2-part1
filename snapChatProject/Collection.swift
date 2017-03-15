@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+extension Collection where Iterator.Element: Equatable {
+    public func split(separator: Self.Iterator.Element,
+                      maxSplits: Int =, default,
+        omittingEmptySubsequences: Bool = default)
+        -> [Self.SubSequence]
+}

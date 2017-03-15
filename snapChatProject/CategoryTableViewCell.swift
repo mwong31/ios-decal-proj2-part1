@@ -10,6 +10,8 @@ import UIKit
 
 class CategoryTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var threadName: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

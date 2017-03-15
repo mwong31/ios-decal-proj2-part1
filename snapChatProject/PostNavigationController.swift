@@ -9,7 +9,7 @@
 import UIKit
 
 class PostNavigationController: UINavigationController {
-
+        
     override func viewDidLoad() {
         super.viewDidLoad()
     }

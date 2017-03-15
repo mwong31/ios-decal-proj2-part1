@@ -10,6 +10,13 @@ import UIKit
 
 class FeedTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var redButton: UIImageView!
+    @IBOutlet weak var senderName: UILabel!
+    @IBOutlet weak var timeSent: UILabel!
+    
+    var holdImage: UIImage? 
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+import UIKit
+
+class Category {
+    var heading: String?
+    var items: [UIImage]?
+    
+    init (title: String, objects: [UIImage]) {
+        self.heading = title
+        self.items = objects
+    }
+
+}

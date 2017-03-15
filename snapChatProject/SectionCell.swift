@@ -10,6 +10,10 @@ import UIKit
 
 class SectionCell: UITableViewCell {
 
+    
+    @IBOutlet weak var subSectionFeed: UITableView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

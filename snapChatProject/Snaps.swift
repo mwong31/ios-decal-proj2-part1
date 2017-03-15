@@ -7,3 +7,21 @@
 //
 
 import Foundation
+import UIKit
+
+class Snaps {
+    var sender: String?
+    var unread = #imageLiteral(resourceName: "unread")
+    var timeAgo: NSDate?
+    var pic: UIImage?
+    var feed: String?
+    
+    init (sender: String, timeAgo: NSDate, pic: UIImage, feed: String) {
+        self.sender = sender
+        self.timeAgo = timeAgo
+        self.pic = pic
+        self.feed = feed
+    }
+    
+
+}

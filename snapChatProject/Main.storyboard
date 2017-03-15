@@ -52,7 +52,7 @@
                     <tabBarItem key="tabBarItem" title="" image="post" id="gnR-Ix-05c">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="DU8-uv-D3A">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DU8-uv-D3A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -299,7 +299,7 @@
                     </view>
                     <connections>
                         <outlet property="currSnap" destination="MRz-uM-LY9" id="hxa-bl-QG4"/>
-                        <segue destination="Anh-FE-dWG" kind="show" identifier="backToFeed" id="2H1-Ul-o8i"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="backToPicker" id="oPN-s3-IU7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfD-wG-DDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -313,7 +313,7 @@
         <image name="post" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KFc-0i-wxI"/>
         <segue reference="66K-FM-FUA"/>
+        <segue reference="oPN-s3-IU7"/>
     </inferredMetricsTieBreakers>
 </document>

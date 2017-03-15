@@ -9,8 +9,11 @@
 import UIKit
 
 class ImagePickerController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    
     @IBOutlet var imageCollectionView: UICollectionView!
+    
+    var selectedImage : UIImage?
+    var feeds : [String]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imageCollectionView.collectionViewLayout = ImageFlowLayout.init()
@@ -20,12 +23,13 @@ class ImagePickerController: UIViewController, UICollectionViewDataSource, UICol
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
 
     func selectImage(_ image: UIImage) {
         //The image being selected is passed in as "image".
+        selectedImage = image
+        feeds = threadNames
+        performSegue(withIdentifier: "selectedImage", sender: self)
     }
-    
     
     
     //DON'T MODIFY CODE HERE AND BELOW!
@@ -40,8 +44,22 @@ class ImagePickerController: UIViewController, UICollectionViewDataSource, UICol
         cell.image.image = allImages[indexPath.row]
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedCell = collectionView.cellForItem(at: indexPath) as! imageCollectionVieCell
         selectImage(selectedCell.image.image!)
     }
+    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            if identifier == "selectedImage" {
+                let dest = segue.destination as? CategoryViewController
+                dest?.selectedImage = selectedImage
+                dest?.categoryThreads = feeds!
+    
+            }
+        }
+    }
+    
 }

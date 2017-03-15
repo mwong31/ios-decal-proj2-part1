@@ -10,9 +10,19 @@ import UIKit
 
 class DisplaySnapViewController: UIViewController {
 
+    
+    @IBOutlet weak var currSnap: UIButton!
+
+    @IBAction func tapSnap(_ sender: UIButton) {
+        performSegue(withIdentifier: "backToPicker", sender: self)
+    }
+    
+    var getImage: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        currSnap.setBackgroundImage(getImage!, for: UIControlState.normal)
+        currSnap.setTitle("", for: UIControlState.normal)
         // Do any additional setup after loading the view.
     }
 
